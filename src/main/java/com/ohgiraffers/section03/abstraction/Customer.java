@@ -4,12 +4,28 @@ public class Customer {
 
     private final ATM atm = new ATM();
 
-    public void emptyCard() {atm.insertCard();}
+    public void emptyCard() {
 
-    public void depositMoney() {atm.deposit();}
+        atm.insertCard();
 
-    public void withdrawMoney() {atm.withdraw();}
+    }
 
-    public void removeCard() {atm.removeCard();}
+    public void depositMoney() {
+
+        atm.deposit();
+
+    }
+
+    public void withdrawMoney() {
+
+        atm.withdraw();
+
+    }
+
+    public void removeCard() {
+
+        atm.removeCard();
+
+    }
 
 }

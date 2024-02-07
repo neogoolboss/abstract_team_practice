@@ -1,6 +1,5 @@
 package com.ohgiraffers.section03.abstraction;
 
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.Scanner;
 
@@ -35,17 +34,21 @@ public class Application {
         Scanner sc = new Scanner(System.in);
 
         while(true) {
-            System.out.println("============ XX은행 ATM ============");
-            System.out.println("1. 카드삽입");
-            System.out.println("2. 입금");
-            System.out.println("3. 출금");
-            System.out.println("4. 카드뽑기");
-            System.out.println("9. 목록으로 돌아가기");
-            System.out.print("메뉴 선택 : ");
+            System.out.println("───────── 💲ATM💲 ─────────");
+            System.out.println("       1. 카드삽입");
+            System.out.println("        2. 입금");
+            System.out.println("        3. 출금");
+            System.out.println("       4. 카드뽑기");
+            System.out.println("       9. 종료하기");
+            System.out.println("     0. 메뉴로 돌아가기");
+            System.out.print("       메뉴 선택 : ");
+
 
             int no = sc.nextInt();
 
+
             switch(no) {
+
                 case 1 :
                     customer.emptyCard();
                     break;
@@ -63,15 +66,22 @@ public class Application {
                     break;
 
                 case 9 :
-                    System.out.println("목록으로 돌아갑니다.");
+                    System.out.println("시스템을 종료합니다.");
                     break;
+
+                case 0 :
+                    System.out.println("목록으로 돌아갑니다.");
+                    continue;
 
                 default:
                     System.out.println("잘못된 번호를 선택하셨습니다.");
                     break;
             }
+
             if(no == 9) {
+
                 break;
+
             }
 
         }
